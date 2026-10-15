@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri Ram Horizon Properties & Construction | Luxury Real Estate Indore</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            navy: '#0b1329',
+                            gold: '#c59b27',
+                            goldLight: '#fef3c7',
+                            lightBg: '#f8fafc',
+                            cardWhite: '#ffffff',
+                            accent: '#d97706'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-video {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(197, 155, 39, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-luxury-lightBg text-slate-800 font-sans antialiased selection:bg-luxury-gold selection:text-white">
+
+    <!-- TOP BAR -->
+    <div class="bg-luxury-navy text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-6">
+                <span><i class="fa-solid fa-location-dot text-luxury-gold mr-2"></i> Indore & Pithampur, MP</span>
+                <span class="hidden sm:inline"><i class="fa-solid fa-clock text-luxury-gold mr-2"></i> Mon - Sun: 10:00 AM - 7:00 PM</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:+919009250061" class="hover:text-luxury-gold transition"><i class="fa-solid fa-phone text-luxury-gold mr-1"></i> +91 90092 50061</a>
+                <span class="text-slate-600">|</span>
+                <button id="langToggleBtn" onclick="toggleLanguage()" class="bg-luxury-gold/20 text-luxury-gold border border-luxury-gold/40 px-2.5 py-0.5 rounded text-xs font-bold hover:bg-luxury-gold hover:text-white transition flex items-center gap-1">
+                    <i class="fa-solid fa-language"></i> <span id="langText">EN / हिंदी</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#home" class="flex items-center space-x-3">
+                    <div class="bg-luxury-navy text-luxury-gold p-2.5 rounded-xl font-bold text-xl border border-luxury-gold/40 shadow-sm">
+                        <i class="fa-solid fa-building-shield"></i>
+                    </div>
+                    <div>
+                        <span class="text-lg md:text-xl font-extrabold text-luxury-navy tracking-tight block leading-tight">SHRI RAM HORIZON</span>
+                        <span class="text-[10px] tracking-widest text-luxury-gold font-bold uppercase block">Properties & Construction</span>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-7 font-semibold text-sm text-slate-700">
+                    <a href="#home" class="hover:text-luxury-gold transition text-luxury-gold" data-en="Home" data-hi="होम">Home</a>
+                    <a href="#about" class="hover:text-luxury-gold transition" data-en="About" data-hi="हमारे बारे में">About</a>
+                    <a href="#properties" class="hover:text-luxury-gold transition" data-en="Properties" data-hi="प्रॉपर्टीज">Properties</a>
+                    <a href="#projects" class="hover:text-luxury-gold transition" data-en="Projects" data-hi="प्रोजेक्ट्स">Projects</a>
+                    <a href="#gallery" class="hover:text-luxury-gold transition" data-en="Gallery" data-hi="गैलरी">Gallery</a>
+                    <a href="#why-us" class="hover:text-luxury-gold transition" data-en="Why Us" data-hi="क्यों चुनें">Why Us</a>
+                    <a href="#faq" class="hover:text-luxury-gold transition" data-en="FAQs" data-hi="सवाल-जवाब">FAQs</a>
+                    <a href="#contact" class="hover:text-luxury-gold transition" data-en="Contact" data-hi="संपर्क करें">Contact</a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="#contact" class="bg-luxury-gold hover:bg-amber-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-md transition flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-check"></i> <span data-en="Book Site Visit" data-hi="साइट विजिट बुक करें">Book Site Visit</span>
+                    </a>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="text-slate-700 hover:text-luxury-gold text-2xl focus:outline-none">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 font-medium">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-luxury-gold border-b border-slate-100" data-en="Home" data-hi="होम">Home</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 border-b border-slate-100" data-en="About" data-hi="हमारे बारे में">About</a>
+            <a href="#properties" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 border-b border-slate-100" data-en="Properties" data-hi="प्रॉपर्टीज">Properties</a>
+            <a href="#projects" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 border-b border-slate-100" data-en="Projects" data-hi="प्रोजेक्ट्स">Projects</a>
+            <a href="#gallery" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 border-b border-slate-100" data-en="Gallery" data-hi="गैलरी">Gallery</a>
+            <a href="#why-us" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 border-b border-slate-100" data-en="Why Us" data-hi="क्यों चुनें">Why Us</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 border-b border-slate-100" data-en="FAQs" data-hi="सवाल-जवाब">FAQs</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-slate-700" data-en="Contact" data-hi="संपर्क करें">Contact</a>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: HERO WITH VIDEO LOOP -->
+    <section id="home" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-luxury-navy">
+        <!-- Local & Online Backup Video Source -->
+        <video class="hero-video opacity-50" autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=80">
+            <source src="hero-video.mp4" type="video/mp4">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+        </video>
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-luxury-navy via-luxury-navy/60 to-transparent"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto text-center px-4 py-20">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-luxury-gold/20 border border-luxury-gold/50 text-luxury-gold text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-md">
+                <i class="fa-solid fa-crown text-luxury-gold"></i> <span data-en="12+ Years of Luxury Real Estate Excellence" data-hi="इंदौर व पीथमपुर में 12+ वर्षों का शानदार अनुभव">12+ Years of Luxury Real Estate Excellence</span>
+            </div>
+            
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight mb-6 font-serif" data-en="From Zero To Peak.<br><span class='text-luxury-gold'>Your Dream Property</span> Awaits." data-hi="शून्य से शिखर तक।<br><span class='text-luxury-gold'>आपके सपनों का आशियाना</span> यहाँ है।">
+                From Zero To Peak.<br><span class="text-luxury-gold">Your Dream Property</span> Awaits.
+            </h1>
+
+            <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mb-10" data-en="Explore premium T&CP approved residential plots, highway commercial corridors, and bespoke turnkey construction across Indore & Pithampur." data-hi="बेटमा बायपास, सगौर कुटी और पीथमपुर में T&CP अप्रूव्ड प्लॉट्स और शानदार मकान निर्माण की सेवाएं।">
+                Explore premium T&CP approved residential plots, highway commercial corridors, and bespoke turnkey construction across Indore & Pithampur.
+            </p>
+
+            <div class="glass-card p-4 sm:p-6 rounded-2xl shadow-2xl max-w-4xl mx-auto text-left">
+                <form action="#properties" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-600 uppercase mb-1" data-en="Select Location" data-hi="लोकेशन चुनें">Select Location</label>
+                        <select class="w-full bg-white border border-slate-200 rounded-xl py-2.5 px-3 text-slate-800 text-sm font-semibold focus:outline-none focus:border-luxury-gold">
+                            <option data-en="All Locations (Indore/Pithampur)" data-hi="सभी लोकेशन्स (इंदौर/पीथमपुर)">All Locations (Indore/Pithampur)</option>
+                            <option>Betma Bypass, Indore</option>
+                            <option>Sagore Kuti, Pithampur</option>
+                            <option>Betma Road, Pithampur</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-600 uppercase mb-1" data-en="Property Type" data-hi="प्रॉपर्टी का प्रकार">Property Type</label>
+                        <select class="w-full bg-white border border-slate-200 rounded-xl py-2.5 px-3 text-slate-800 text-sm font-semibold focus:outline-none focus:border-luxury-gold">
+                            <option data-en="Residential Plot (T&CP)" data-hi="आवासीय प्लॉट (T&CP)">Residential Plot (T&CP)</option>
+                            <option data-en="Commercial Plot" data-hi="कमर्शियल प्लॉट">Commercial Plot</option>
+                            <option data-en="Turnkey Construction" data-hi="मकान निर्माण">Turnkey Construction</option>
+                        </select>
+                    </div>
+                    <div class="flex items-end">
+                        <button type="submit" class="w-full bg-luxury-navy hover:bg-slate-900 text-white font-bold py-2.5 px-4 rounded-xl transition shadow-md flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass text-luxury-gold"></i> <span data-en="Search Property" data-hi="प्रॉपर्टी खोजें">Search Property</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT US -->
+    <section id="about" class="py-20 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-luxury-gold font-extrabold text-xs uppercase tracking-widest block mb-2" data-en="About Shri Ram Horizon" data-hi="हमारे बारे में">About Shri Ram Horizon</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-luxury-navy mb-6 leading-tight font-serif" data-en="Crafting Lifetime Value With Absolute Transparency" data-hi="पूर्ण पारदर्शिता और भरोसे के साथ आपके सपनों का निर्माण">
+                        Crafting Lifetime Value With Absolute Transparency
+                    </h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed" data-en="Headquartered in Indore, Shri Ram Horizon Properties & Construction delivers benchmark real estate solutions. From 100% legal T&CP approved plots to custom turnkey homes, we serve with honesty and excellence." data-hi="इंदौर में स्थित श्री राम होराइजन प्रॉपर्टीज एंड कंस्ट्रक्शन विश्वसनीय रियल एस्टेट सेवाएं प्रदान करता है। 100% कानूनी रूप से सत्यापित और T&CP स्वीकृत प्लॉट्स हमारे माध्यम से सुलभ हैं।">
+                        Headquartered in Indore, Shri Ram Horizon Properties & Construction delivers benchmark real estate solutions. From 100% legal T&CP approved plots to custom turnkey homes, we serve with honesty and excellence.
+                    </p>
+
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="bg-luxury-lightBg p-4 rounded-xl border border-slate-200 text-center shadow-sm">
+                            <h3 class="text-2xl font-extrabold text-luxury-gold mb-1">12+</h3>
+                            <p class="text-[11px] font-bold text-slate-600 uppercase" data-en="Years Experience" data-hi="वर्षों का अनुभव">Years Experience</p>
+                        </div>
+                        <div class="bg-luxury-lightBg p-4 rounded-xl border border-slate-200 text-center shadow-sm">
+                            <h3 class="text-2xl font-extrabold text-luxury-gold mb-1">5000+</h3>
+                            <p class="text-[11px] font-bold text-slate-600 uppercase" data-en="Happy Clients" data-hi="संतुष्ट ग्राहक">Happy Clients</p>
+                        </div>
+                        <div class="bg-luxury-lightBg p-4 rounded-xl border border-slate-200 text-center shadow-sm">
+                            <h3 class="text-2xl font-extrabold text-luxury-gold mb-1">4.8★</h3>
+                            <p class="text-[11px] font-bold text-slate-600 uppercase" data-en="Rating" data-hi="रेटिंग">Rating</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-luxury-navy to-slate-900 rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden border border-luxury-gold/30">
+                    <span class="bg-luxury-gold text-luxury-navy font-extrabold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">Founder Spotlight</span>
+                    <h3 class="text-2xl font-bold text-white mb-1 font-serif">Dharmendra Choudhary</h3>
+                    <p class="text-luxury-gold font-semibold text-sm mb-4">Founder & Managing Director</p>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6 italic" data-en="&quot;Our journey from zero to peak is defined by client trust, legal clarity, and uncompromised quality.&quot;" data-hi="&quot;हमारा सफर शून्य से शिखर तक ग्राहकों के अटूट विश्वास और कानूनी स्पष्टता पर आधारित है।&quot;">
+                        "Our journey from zero to peak is defined by client trust, legal clarity, and uncompromised quality."
+                    </p>
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <div>
+                            <p class="text-xs text-slate-400" data-en="Direct Helpline" data-hi="सीधा संपर्क">Direct Helpline</p>
+                            <p class="font-bold text-white">+91 90092 50061</p>
+                        </div>
+                        <a href="https://wa.me/919009250061" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: PROPERTIES -->
+    <section id="properties" class="py-20 bg-luxury-lightBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-luxury-gold font-extrabold text-xs uppercase tracking-widest block mb-2" data-en="Exclusive Portfolios" data-hi="विशेष प्रॉपर्टीज">Exclusive Portfolios</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-luxury-navy font-serif" data-en="Featured Townships & Land Parcels" data-hi="प्रमुख टाउनशिप एवं प्लॉट्स">Featured Townships & Land Parcels</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-slate-200 flex flex-col">
+                    <div class="relative h-60 bg-slate-200">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Plot" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-2.5 py-1 rounded-md shadow" data-en="T&CP Approved" data-hi="T&CP अप्रूव्ड">T&CP Approved</span>
+                        <span class="absolute bottom-3 right-3 bg-luxury-navy text-luxury-gold text-xs font-bold px-3 py-1 rounded-md shadow" data-en="From ₹6 Lakhs*" data-hi="₹6 लाख से शुरू*">From ₹6 Lakhs*</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-luxury-gold uppercase tracking-wider block mb-1">Residential Plot</span>
+                            <h3 class="text-xl font-bold text-luxury-navy mb-2 font-serif">Rudraksha City, Betma Bypass</h3>
+                            <p class="text-slate-500 text-sm mb-4"><i class="fa-solid fa-location-dot text-red-500 mr-1.5"></i> Betma Bypass, Indore MP</p>
+                            <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-600 mb-6 bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                <div><i class="fa-solid fa-ruler-combined text-luxury-gold mr-1"></i> 1000 - 1500 sq ft</div>
+                                <div><i class="fa-solid fa-file-contract text-luxury-gold mr-1"></i> Instant Registry</div>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full bg-luxury-navy hover:bg-slate-900 text-white text-center py-2.5 rounded-xl font-bold text-sm transition shadow" data-en="Inquire Now" data-hi="जानकारी लें">Inquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-slate-200 flex flex-col">
+                    <div class="relative h-60 bg-slate-200">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Plot" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-2.5 py-1 rounded-md shadow" data-en="T&CP Approved" data-hi="T&CP अप्रूव्ड">T&CP Approved</span>
+                        <span class="absolute bottom-3 right-3 bg-luxury-navy text-luxury-gold text-xs font-bold px-3 py-1 rounded-md shadow" data-en="From ₹6.5 Lakhs*" data-hi="₹6.5 लाख से शुरू*">From ₹6.5 Lakhs*</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-luxury-gold uppercase tracking-wider block mb-1">Residential Plot</span>
+                            <h3 class="text-xl font-bold text-luxury-navy mb-2 font-serif">Sagore Kuti Plots</h3>
+                            <p class="text-slate-500 text-sm mb-4"><i class="fa-solid fa-location-dot text-red-500 mr-1.5"></i> Sagore Kuti, Pithampur MP</p>
+                            <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-600 mb-6 bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                <div><i class="fa-solid fa-ruler-combined text-luxury-gold mr-1"></i> 800 - 1200 sq ft</div>
+                                <div><i class="fa-solid fa-building-columns text-luxury-gold mr-1"></i> Bank Loan Ready</div>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full bg-luxury-navy hover:bg-slate-900 text-white text-center py-2.5 rounded-xl font-bold text-sm transition shadow" data-en="Inquire Now" data-hi="जानकारी लें">Inquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-slate-200 flex flex-col">
+                    <div class="relative h-60 bg-slate-200">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="Turnkey Construction" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-amber-600 text-white text-xs font-bold px-2.5 py-1 rounded-md shadow" data-en="Turnkey Service" data-hi="टर्नकी सर्विस">Turnkey Service</span>
+                        <span class="absolute bottom-3 right-3 bg-luxury-navy text-luxury-gold text-xs font-bold px-3 py-1 rounded-md shadow" data-en="Customized Rates" data-hi="अनुकूलित दरें">Customized Rates</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-luxury-gold uppercase tracking-wider block mb-1">House Construction</span>
+                            <h3 class="text-xl font-bold text-luxury-navy mb-2 font-serif">Turnkey Home Construction</h3>
+                            <p class="text-slate-500 text-sm mb-4"><i class="fa-solid fa-location-dot text-red-500 mr-1.5"></i> All Across Indore & Pithampur</p>
+                            <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-600 mb-6 bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                <div><i class="fa-solid fa-hammer text-luxury-gold mr-1"></i> Material + Labour</div>
+                                <div><i class="fa-solid fa-shield-halved text-luxury-gold mr-1"></i> Structure Warranty</div>
+                            </div>
+                        </div>
+                        <a href="#contact" class="w-full bg-luxury-navy hover:bg-slate-900 text-white text-center py-2.5 rounded-xl font-bold text-sm transition shadow" data-en="Inquire Now" data-hi="जानकारी लें">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: PROJECTS -->
+    <section id="projects" class="py-20 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-luxury-gold font-extrabold text-xs uppercase tracking-widest block mb-2" data-en="Strategic Locations" data-hi="प्रमुख प्रोजेक्ट्स">Strategic Locations</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-luxury-navy font-serif" data-en="Ongoing & Completed Developments" data-hi="चल रहे एवं पूर्ण प्रोजेक्ट्स">Ongoing & Completed Developments</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-6 rounded-2xl bg-luxury-lightBg border border-slate-200 flex flex-col sm:flex-row gap-6 items-center shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80" alt="Project" class="w-full sm:w-48 h-40 object-cover rounded-xl shadow">
+                    <div>
+                        <span class="text-xs font-bold text-luxury-gold uppercase" data-en="Prime Corridor" data-hi="प्राइम कॉरिडोर">Prime Corridor</span>
+                        <h3 class="text-xl font-bold text-luxury-navy mt-1 mb-2 font-serif">Betma Bypass Highway Touch</h3>
+                        <p class="text-slate-600 text-sm mb-4" data-en="Fully developed road connectivity with electricity line setup and boundary demarcation." data-hi="चौड़ी सड़कें, बिजली लाइन सेटअप और पूर्ण बाउंड्री सीमांकन सुविधा।">Fully developed road connectivity with electricity line setup and boundary demarcation.</p>
+                        <a href="#contact" class="text-luxury-navy font-bold text-sm hover:text-luxury-gold transition inline-flex items-center gap-1" data-en="View Project Details →" data-hi="प्रोजेक्ट की जानकारी →">View Project Details →</a>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-luxury-lightBg border border-slate-200 flex flex-col sm:flex-row gap-6 items-center shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=500&q=80" alt="Project" class="w-full sm:w-48 h-40 object-cover rounded-xl shadow">
+                    <div>
+                        <span class="text-xs font-bold text-luxury-gold uppercase" data-en="Industrial Hub" data-hi="इंडस्ट्रियल हब">Industrial Hub</span>
+                        <h3 class="text-xl font-bold text-luxury-navy mt-1 mb-2 font-serif">Pithampur Industrial Residential Sector</h3>
+                        <p class="text-slate-600 text-sm mb-4" data-en="High appreciation potential near industrial workforce corridors and Betma Road." data-hi="पीथमपुर औद्योगिक क्षेत्र के पास तेजी से बढ़ती कीमतों वाला रेजिडेंशियल क्षेत्र।">High appreciation potential near industrial workforce corridors and Betma Road.</p>
+                        <a href="#contact" class="text-luxury-navy font-bold text-sm hover:text-luxury-gold transition inline-flex items-center gap-1" data-en="View Project Details →" data-hi="प्रोजेक्ट की जानकारी →">View Project Details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: GALLERY -->
+    <section id="gallery" class="py-20 bg-luxury-lightBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-luxury-gold font-extrabold text-xs uppercase tracking-widest block mb-2" data-en="Site Highlights" data-hi="साइट गैलरी">Site Highlights</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-luxury-navy font-serif" data-en="Project & Development Gallery" data-hi="प्रोजेक्ट विकास एवं साइट तस्वीरें">Project & Development Gallery</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="group relative h-48 rounded-2xl overflow-hidden shadow-sm border border-slate-200">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-luxury-navy/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white font-bold text-xs" data-en="Plot Layouts" data-hi="प्लॉट लेआउट">Plot Layouts</div>
+                </div>
+                <div class="group relative h-48 rounded-2xl overflow-hidden shadow-sm border border-slate-200">
+                    <img src="https://images.unsplash.com/photo-1592595896616-c37162298647?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-luxury-navy/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white font-bold text-xs" data-en="Road Infrastructure" data-hi="रोड इंफ्रास्ट्रक्चर">Road Infrastructure</div>
+                </div>
+                <div class="group relative h-48 rounded-2xl overflow-hidden shadow-sm border border-slate-200">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-luxury-navy/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white font-bold text-xs" data-en="Construction Quality" data-hi="निर्माण कार्य">Construction Quality</div>
+                </div>
+                <div class="group relative h-48 rounded-2xl overflow-hidden shadow-sm border border-slate-200">
+                    <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-luxury-navy/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white font-bold text-xs" data-en="Happy Clients" data-hi="संतुष्ट ग्राहक">Happy Clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: WHY US -->
+    <section id="why-us" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-luxury-gold font-extrabold text-xs uppercase tracking-widest block mb-2" data-en="Our Value Promise" data-hi="हमारी खासियत">Our Value Promise</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-luxury-navy font-serif" data-en="Why Choose Shri Ram Horizon?" data-hi="श्री राम होराइजन को ही क्यों चुनें?">Why Choose Shri Ram Horizon?</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-luxury-lightBg p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="w-12 h-12 bg-luxury-gold/10 text-luxury-gold rounded-xl flex items-center justify-center text-xl font-bold mb-6 border border-luxury-gold/20">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-luxury-navy mb-3 font-serif" data-en="100% Legal Transparency" data-hi="100% कानूनी सुरक्षा">100% Legal Transparency</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-en="Every plot carries genuine T&CP approvals with clear title documentation and zero hidden charges." data-hi="हमारे सभी प्लॉट्स T&CP (टाउन एंड कंट्री प्लानिंग) अप्रूव्ड हैं, जिनकी रजिस्ट्री पूरी तरह स्पष्ट हैं।">Every plot carries genuine T&CP approvals with clear title documentation and zero hidden charges.</p>
+                </div>
+
+                <div class="bg-luxury-lightBg p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="w-12 h-12 bg-luxury-gold/10 text-luxury-gold rounded-xl flex items-center justify-center text-xl font-bold mb-6 border border-luxury-gold/20">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-luxury-navy mb-3 font-serif" data-en="Easy EMI & Bank Loan Support" data-hi="आसान EMI एवं बैंक लोन सुविधा">Easy EMI & Bank Loan Support</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-en="We assist with easy bank loan approvals through leading nationalized and private banks." data-hi="राष्ट्रीयकृत एवं प्राइवेट बैंकों से आसान लोन स्वीकृति और सुविधाजनक EMI योजनाएं उपलब्ध हैं।">We assist with easy bank loan approvals through leading nationalized and private banks.</p>
+                </div>
+
+                <div class="bg-luxury-lightBg p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="w-12 h-12 bg-luxury-gold/10 text-luxury-gold rounded-xl flex items-center justify-center text-xl font-bold mb-6 border border-luxury-gold/20">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-luxury-navy mb-3 font-serif" data-en="Hands-on Dedicated Support" data-hi="साइट विजिट से रजिस्ट्री तक साथ">Hands-on Dedicated Support</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-en="From free vehicle site visits to final registry and home possession, our team guides you through every step." data-hi="मुफ्त पिक एंड ड्रॉप साइट विजिट से लेकर रजिस्ट्री और पजेशन तक हमारी टीम हर कदम पर साथ है।">From free vehicle site visits to final registry and home possession, our team guides you through every step.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: FAQS -->
+    <section id="faq" class="py-20 bg-luxury-lightBg border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-luxury-gold font-extrabold text-xs uppercase tracking-widest block mb-2" data-en="Got Questions?" data-hi="अक्सर पूछे जाने वाले सवाल">Got Questions?</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-luxury-navy font-serif" data-en="Frequently Asked Questions" data-hi="आपके प्रमुख सवालों के जवाब">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(1)" class="w-full text-left p-5 font-bold text-luxury-navy flex justify-between items-center focus:outline-none">
+                        <span data-en="1. What is T&CP Approval and why is it important?" data-hi="1. T&CP अप्रूवल क्या है और यह क्यों जरूरी है?">1. What is T&CP Approval and why is it important?</span>
+                        <i id="faq-icon-1" class="fa-solid fa-chevron-down text-luxury-gold transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-1" class="hidden px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3" data-en="T&CP approval verifies that the plot layout is legally sanctioned by government authorities with required road widths and infrastructure setup." data-hi="T&CP अप्रूवल यह सुनिश्चित करता है कि प्लॉट का लेआउट सरकारी नियमों के अनुसार मंजूर है और जमीन पूरी तरह वैध है।">
+                        T&CP approval verifies that the plot layout is legally sanctioned by government authorities with required road widths and infrastructure setup.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(2)" class="w-full text-left p-5 font-bold text-luxury-navy flex justify-between items-center focus:outline-none">
+                        <span data-en="2. What is the starting price for residential plots?" data-hi="2. प्लॉट्स की शुरुआती कीमत क्या है?">2. What is the starting price for residential plots?</span>
+                        <i id="faq-icon-2" class="fa-solid fa-chevron-down text-luxury-gold transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-2" class="hidden px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3" data-en="Residential plots in Sagore Kuti and Betma Bypass corridors start from ₹6 Lakhs onwards depending on location and size." data-hi="बेटमा बायपास और सगौर कुटी क्षेत्र में आवासीय प्लॉट्स ₹6 लाख* से शुरू होते हैं।">
+                        Residential plots in Sagore Kuti and Betma Bypass corridors start from ₹6 Lakhs onwards depending on location and size.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(3)" class="w-full text-left p-5 font-bold text-luxury-navy flex justify-between items-center focus:outline-none">
+                        <span data-en="3. Do you offer bank loan and easy EMI options?" data-hi="3. क्या बैंक लोन और आसान EMI की सुविधा है?">3. Do you offer bank loan and easy EMI options?</span>
+                        <i id="faq-icon-3" class="fa-solid fa-chevron-down text-luxury-gold transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-3" class="hidden px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3" data-en="Yes, up to 70-80% bank finance is available for T&CP approved plots through leading public and private sector banks." data-hi="जी हाँ, T&CP अप्रूव्ड प्लॉट्स पर प्रमुख बैंकों द्वारा 70-80% तक लोन एवं आसान किश्तों की सुविधा उपलब्ध है।">
+                        Yes, up to 70-80% bank finance is available for T&CP approved plots through leading public and private sector banks.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(4)" class="w-full text-left p-5 font-bold text-luxury-navy flex justify-between items-center focus:outline-none">
+                        <span data-en="4. How can I schedule a free site visit?" data-hi="4. मैं फ्री साइट विजिट कैसे बुक कर सकता हूँ?">4. How can I schedule a free site visit?</span>
+                        <i id="faq-icon-4" class="fa-solid fa-chevron-down text-luxury-gold transition-transform"></i>
+                    </button>
+                    <div id="faq-ans-4" class="hidden px-5 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-3" data-en="You can fill out the contact form below or call us directly at +91 90092 50061 to book a complimentary vehicle site visit." data-hi="आप नीचे दिए गए फॉर्म में अपना नंबर छोड़ सकते हैं या सीधा +91 90092 50061 पर कॉल/व्हाट्सएप कर सकते हैं।">
+                        You can fill out the contact form below or call us directly at +91 90092 50061 to book a complimentary vehicle site visit.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: CONTACT -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <span class="text-luxury-gold font-extrabold text-xs uppercase tracking-widest block mb-2" data-en="Get In Touch" data-hi="संपर्क करें">Get In Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-luxury-navy mb-6 font-serif" data-en="Book Your Free Site Visit Today" data-hi="आज ही अपनी फ्री साइट विजिट शेड्यूल करें">Book Your Free Site Visit Today</h2>
+                    <p class="text-slate-600 mb-8" data-en="Have questions about plot availability, site layout plans, or construction quotes? Leave your phone number and our property experts will call you back." data-hi="प्लॉट उपलब्धता, साइट लेआउट प्लान या कंस्ट्रक्शन रेट्स के बारे में कोई सवाल? अपना नंबर छोड़ें और हमारे एक्सपर्ट्स आपको तुरंत कॉल करेंगे।">
+                        Have questions about plot availability, site layout plans, or construction quotes? Leave your phone number and our property experts will call you back.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-luxury-lightBg text-luxury-gold p-3 rounded-xl border border-slate-200">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-luxury-navy text-sm font-serif" data-en="Head Office (Indore)" data-hi="हेड ऑफिस (इंदौर)">Head Office (Indore)</h4>
+                                <p class="text-slate-600 text-xs mt-0.5">Annapurna Rd, Usha Nagar, Indore, Madhya Pradesh 452009</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-luxury-lightBg text-luxury-gold p-3 rounded-xl border border-slate-200">
+                                <i class="fa-solid fa-building text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-luxury-navy text-sm font-serif" data-en="Branch Office (Pithampur)" data-hi="ब्रांच ऑफिस (पीथमपुर)">Branch Office (Pithampur)</h4>
+                                <p class="text-slate-600 text-xs mt-0.5">Hortus Conclusus, Sector 1, Pithampur Industrial Area, MP 454774</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-luxury-lightBg text-luxury-gold p-3 rounded-xl border border-slate-200">
+                                <i class="fa-solid fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-luxury-navy text-sm font-serif" data-en="Phone Support" data-hi="फोन सपोर्ट">Phone Support</h4>
+                                <p class="text-slate-600 text-xs mt-0.5">+91 90092 50061 / +91 89623 36621</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-luxury-lightBg p-8 rounded-3xl border border-slate-200 shadow-sm">
+                    <h3 class="text-xl font-bold text-luxury-navy mb-6 font-serif" data-en="Schedule Free Vehicle Pickup Site Visit" data-hi="फ्री पिकअप साइट विजिट बुक करें">Schedule Free Vehicle Pickup Site Visit</h3>
+                    <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1" data-en="Your Full Name" data-hi="आपका पूरा नाम">Your Full Name</label>
+                            <input type="text" required placeholder="e.g. Rahul Sharma" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-luxury-gold">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1" data-en="Phone / WhatsApp Number" data-hi="फोन / व्हाट्सएप नंबर">Phone / WhatsApp Number</label>
+                            <input type="tel" required placeholder="+91 98765 43210" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-luxury-gold">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1" data-en="Preferred Location" data-hi="पसंदीदा लोकेशन">Preferred Location</label>
+                            <select class="w-full bg-white border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-luxury-gold">
+                                <option>Betma Bypass, Indore</option>
+                                <option>Sagore Kuti, Pithampur</option>
+                                <option>Turnkey House Construction</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-luxury-gold hover:bg-amber-600 text-white font-bold py-3 rounded-xl shadow transition" data-en="Request Callback & Site Visit" data-hi="साइट विजिट के लिए मैसेज भेजें">Request Callback & Site Visit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-luxury-navy text-slate-400 text-xs py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-3 justify-center sm:justify-start">
+                    <i class="fa-solid fa-building-shield text-luxury-gold text-lg"></i>
+                    <span class="font-extrabold text-white text-base font-serif">SHRI RAM HORIZON</span>
+                </div>
+                <p class="text-slate-400 leading-relaxed" data-en="Premium real estate & turnkey house construction firm in Indore & MP. T&CP approved plots with trusted legal security." data-hi="इंदौर एवं मध्य प्रदेश में प्रीमियम रियल एस्टेट और टर्नकी मकान निर्माण फर्म। T&CP स्वीकृत प्लॉट्स और पूर्ण कानूनी सुरक्षा।">
+                    Premium real estate & turnkey house construction firm in Indore & MP. T&CP approved plots with trusted legal security.
+                </p>
+            </div>
+            <div class="sm:text-center">
+                <h4 class="text-white font-bold mb-3 uppercase tracking-wider" data-en="Quick Links" data-hi="त्वरित लिंक्स">Quick Links</h4>
+                <div class="space-y-2">
+                    <p><a href="#home" class="hover:text-luxury-gold">Home</a></p>
+                    <p><a href="#about" class="hover:text-luxury-gold">About Us</a></p>
+                    <p><a href="#properties" class="hover:text-luxury-gold">Properties</a></p>
+                    <p><a href="#faq" class="hover:text-luxury-gold">FAQs</a></p>
+                </div>
+            </div>
+            <div class="sm:text-right">
+                <h4 class="text-white font-bold mb-3 uppercase tracking-wider" data-en="Legal" data-hi="लीगल">Legal</h4>
+                <p>© 2026 Shri Ram Horizon Properties & Construction.</p>
+                <p class="mt-1">All Rights Reserved. T&CP Approved Layouts.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        let currentLang = 'EN';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'EN' ? 'HI' : 'EN';
+            document.getElementById('langText').innerText = currentLang === 'EN' ? 'EN / हिंदी' : 'हिंदी / EN';
+
+            const elements = document.querySelectorAll('[data-en]');
+            elements.forEach(el => {
+                if (currentLang === 'HI') {
+                    if (el.getAttribute('data-hi')) {
+                        el.innerHTML = el.getAttribute('data-hi');
+                    }
+                } else {
+                    if (el.getAttribute('data-en')) {
+                        el.innerHTML = el.getAttribute('data-en');
+                    }
+                }
+            });
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function toggleFaq(num) {
+            const ans = document.getElementById(`faq-ans-${num}`);
+            const icon = document.getElementById(`faq-icon-${num}`);
+            ans.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            alert(currentLang === 'EN' ? 'Thank you! Our property advisor will contact you within 15 minutes.' : 'धन्यवाद! हमारे प्रॉपर्टी सलाहकार आपसे 15 मिनट में संपर्क करेंगे।');
+        }
+    </script>
+</body>
+</html>
